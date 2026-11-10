@@ -1,0 +1,21 @@
+RequestID,EmployeeEmail,LeaveType,StartDate,EndDate,Reason,ApprovalStatus
+LR-001,jordan.davis@example.test,Personal,2026-09-05,2026-09-06,Personal appointment,Pending
+LR-002,avery.morgan@example.test,Sick,2026-09-07,2026-09-09,Rest and recovery,Approved
+LR-003,taylor.reed@example.test,Annual,2026-09-09,2026-09-09,Family event,Rejected
+LR-004,casey.brooks@example.test,Personal,2026-09-11,2026-09-12,Personal appointment,Approved
+LR-005,riley.parker@example.test,Sick,2026-09-13,2026-09-15,Rest and recovery,Pending
+LR-006,morgan.lee@example.test,Annual,2026-09-15,2026-09-15,Family event,Approved
+LR-007,jamie.patel@example.test,Personal,2026-09-17,2026-09-18,Personal appointment,Rejected
+LR-008,cameron.ellis@example.test,Sick,2026-09-19,2026-09-21,Rest and recovery,Approved
+LR-009,quinn.bailey@example.test,Annual,2026-09-21,2026-09-21,Family event,Pending
+LR-010,drew.carter@example.test,Personal,2026-09-23,2026-09-24,Personal appointment,Approved
+LR-011,jordan.davis@example.test,Sick,2026-10-24,2026-10-27,Rest and recovery,Rejected
+LR-012,avery.morgan@example.test,Annual,2026-10-24,2026-10-27,Family event,Approved
+LR-013,taylor.reed@example.test,Personal,2026-10-24,2026-10-27,Personal appointment,Pending
+LR-014,casey.brooks@example.test,Sick,2026-10-24,2026-10-27,Rest and recovery,Approved
+LR-015,riley.parker@example.test,Annual,2026-10-24,2026-10-27,Family event,Rejected
+LR-016,morgan.lee@example.test,Personal,2026-10-24,2026-10-27,Personal appointment,Approved
+LR-017,jamie.patel@example.test,Sick,2026-10-24,2026-10-27,Rest and recovery,Pending
+LR-018,cameron.ellis@example.test,Annual,2026-10-24,2026-10-27,Family event,Approved
+LR-019,quinn.bailey@example.test,Personal,2026-10-24,2026-10-27,Personal appointment,Rejected
+LR-020,drew.carter@example.test,Sick,2026-10-24,2026-10-27,Rest and recovery,Approved

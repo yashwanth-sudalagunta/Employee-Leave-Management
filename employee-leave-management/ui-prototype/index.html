@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PeopleOps — Leave Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">P</span><span>people<span class="brand-light">ops</span></span></div>
+    <div class="workspace-label">WORKSPACE</div>
+    <nav>
+      <a class="nav-link active" href="#dashboard"><span>▦</span> Overview</a>
+      <a class="nav-link" href="#requests"><span>▤</span> My requests</a>
+      <a class="nav-link" href="#calendar"><span>▦</span> Team calendar</a>
+      <a class="nav-link" href="#approvals"><span>✓</span> Approvals <span class="nav-count">3</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><div class="help-icon">?</div><strong>Need a hand?</strong><p>Visit the people operations help center.</p><a href="#help">Get support ↗</a></div>
+      <div class="profile"><div class="avatar">JD</div><div><strong>Jordan Davis</strong><small>Product Design</small></div><span class="dots">•••</span></div>
+    </div>
+  </aside>
+
+  <main class="main" id="dashboard">
+    <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> Overview</div><div class="top-actions"><button class="icon-btn" aria-label="Notifications">♧<i></i></button><div class="avatar small">JD</div></div></header>
+    <section class="welcome">
+      <div><p class="eyebrow">MONDAY, NOVEMBER 10, 2026</p><h1>Good morning, Jordan <span>✳</span></h1><p class="muted">Here’s your time-off snapshot. Plan time away with confidence.</p></div>
+      <button class="primary-btn" id="openRequest">＋ Request time off</button>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card"><div class="stat-top"><span>Available balance</span><span class="stat-icon blue">◷</span></div><div class="stat-value">14.5 <small>days</small></div><div class="stat-foot"><span class="positive">↑ 2.5 days</span> accrued this quarter</div><div class="progress"><span style="width:72%"></span></div></article>
+      <article class="stat-card"><div class="stat-top"><span>Used this year</span><span class="stat-icon violet">↗</span></div><div class="stat-value">5.5 <small>days</small></div><div class="stat-foot">Of 20 annual days</div><div class="progress violet-bar"><span style="width:28%"></span></div></article>
+      <article class="stat-card"><div class="stat-top"><span>Pending requests</span><span class="stat-icon amber">◷</span></div><div class="stat-value" id="pendingCount">2 <small>requests</small></div><div class="stat-foot">Awaiting manager review</div><div class="mini-avatars"><span>MC</span><span>AL</span><small>Usually reviewed within 2 days</small></div></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel requests-panel" id="requests">
+        <div class="panel-heading"><div><h2>Recent requests</h2><p class="muted">Track the status of your time off</p></div><a href="#all">View all ↗</a></div>
+        <div class="table-wrap"><table><thead><tr><th>TIME OFF</th><th>DATES</th><th>DAYS</th><th>STATUS</th></tr></thead><tbody id="requestRows">
+          <tr><td><span class="leave-dot vacation"></span><strong>Annual leave</strong><small>Personal trip</small></td><td>Dec 14 – Dec 16</td><td>3</td><td><span class="status pending">Pending</span></td></tr>
+          <tr><td><span class="leave-dot personal"></span><strong>Personal day</strong><small>Personal</small></td><td>Nov 20</td><td>1</td><td><span class="status approved">Approved</span></td></tr>
+          <tr><td><span class="leave-dot sick"></span><strong>Sick leave</strong><small>Medical</small></td><td>Oct 08 – Oct 09</td><td>2</td><td><span class="status approved">Approved</span></td></tr>
+          <tr><td><span class="leave-dot vacation"></span><strong>Annual leave</strong><small>Family event</small></td><td>Sep 04</td><td>1</td><td><span class="status rejected">Rejected</span></td></tr>
+        </tbody></table></div>
+      </article>
+      <article class="panel calendar-panel" id="calendar">
+        <div class="panel-heading"><div><h2>Upcoming time off</h2><p class="muted">Your next planned break</p></div><span class="calendar-icon">▦</span></div>
+        <div class="upcoming-date"><div class="date-tile"><span>DEC</span><strong>14</strong></div><div><strong>Winter getaway</strong><p class="muted">Dec 14 – Dec 16 · 3 days</p><span class="status pending">Awaiting approval</span></div></div>
+        <div class="calendar-note"><span>✦</span><div><strong>Make room to recharge</strong><p>Check your team calendar before submitting new dates.</p></div></div>
+      </article>
+    </section>
+    <footer>PeopleOps <span>·</span> Portfolio UI prototype <span>·</span> Sample data only</footer>
+  </main>
+
+  <dialog id="requestDialog">
+    <form method="dialog" id="leaveForm">
+      <div class="dialog-head"><div><p class="eyebrow">TIME AWAY</p><h2>Request time off</h2><p class="muted">Tell us when you’d like to take a break.</p></div><button class="close-btn" value="cancel" aria-label="Close">×</button></div>
+      <label>Leave type<select id="leaveType" required><option value="Annual leave">Annual leave</option><option value="Personal day">Personal day</option><option value="Sick leave">Sick leave</option></select></label>
+      <div class="form-row"><label>Start date<input id="startDate" type="date" required></label><label>End date<input id="endDate" type="date" required></label></div>
+      <label>Reason<textarea id="reason" rows="3" minlength="5" placeholder="Add a short note for your manager..." required></textarea></label>
+      <p class="form-hint" id="formHint">Your request will be sent to your manager for review.</p>
+      <div class="dialog-actions"><button class="secondary-btn" value="cancel">Cancel</button><button class="primary-btn" id="submitRequest" value="default">Submit request</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

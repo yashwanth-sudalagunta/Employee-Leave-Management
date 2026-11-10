@@ -1,0 +1,11 @@
+EmployeeNumber,FullName,Email,Department,ManagerEmail,AnnualLeaveAllowance,IsActive
+EMP-001,Jordan Davis,jordan.davis@example.test,Product Design,manager@example.test,20,TRUE
+EMP-002,Avery Morgan,avery.morgan@example.test,Engineering,manager@example.test,20,TRUE
+EMP-003,Taylor Reed,taylor.reed@example.test,Human Resources,hrlead@example.test,20,TRUE
+EMP-004,Casey Brooks,casey.brooks@example.test,Finance,manager@example.test,20,TRUE
+EMP-005,Riley Parker,riley.parker@example.test,Sales,saleslead@example.test,20,TRUE
+EMP-006,Morgan Lee,morgan.lee@example.test,Operations,opslead@example.test,20,TRUE
+EMP-007,Jamie Patel,jamie.patel@example.test,Engineering,manager@example.test,20,TRUE
+EMP-008,Cameron Ellis,cameron.ellis@example.test,Product Design,manager@example.test,20,TRUE
+EMP-009,Quinn Bailey,quinn.bailey@example.test,Finance,manager@example.test,20,TRUE
+EMP-010,Drew Carter,drew.carter@example.test,Sales,saleslead@example.test,20,TRUE
